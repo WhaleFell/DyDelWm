@@ -1,5 +1,15 @@
 #-*- coding=utf-8 -*-
-#抖音去水印批量下载
+
+'''
+Author: whalefall
+Date: 2021-01-22 15:12:09
+LastEditTime: 2021-01-22 15:33:05
+LastEditors: Please set LastEditors
+Description: 抖音去水印批量下载
+FilePath: \leaning-pythonc:\Users\Administrator\Desktop\DyDelWm\dyDelWm.py
+'''
+
+
 import requests
 import re
 from time import time,sleep
@@ -17,6 +27,7 @@ header={
 
 #获取视频id 传入任意链接都可
 def getVideoId(urlShare):
+	
 	#先访问传入的链接 获取跳转后的链接(针对短链接)
 	tUrl=requests.get(url=urlShare,headers=header).url
 	#返回的链接应该是 https://www.iesdouyin.com/share/video/视频ID/ 通过正则寻找视频id
